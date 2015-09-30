@@ -10,15 +10,28 @@ let {RaisedButton} = mui,
     }
   },
 
+  getInitialState(){
+    return {
+      counter: 0
+    }
+  },
+
   _handleTap(e){
     e.preventDefault()
     console.log('it worked ------- !')
     console.log(e)
+
+    this.setState({
+      counter: ++this.state.counter
+    })
   },
 
   render(){
     return (
-      <RaisedButton secondary label='tap me' onTouchTap={this._handleTap} />
+      <div>
+        <RaisedButton primary label='tap me' onTouchTap={this._handleTap} />
+        <p>You've pressed the button <b>{this.state.counter}</b> times.</p>
+      </div>
     )
   }
 })
