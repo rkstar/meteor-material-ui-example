@@ -18,7 +18,7 @@ let {RaisedButton} = mui,
 
   render(){
     return (
-      <RaisedButton label='tap me' onTouchTap={this._handleTap} />
+      <RaisedButton secondary label='tap me' onTouchTap={this._handleTap} />
     )
   }
 })

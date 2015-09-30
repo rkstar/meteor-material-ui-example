@@ -3,7 +3,7 @@
     "externalify": {
       "global": true,
       "external": {
-        "react": "Packages[react-runtime].React.require"
+        "react": "React.require"
       }
     }
   }
